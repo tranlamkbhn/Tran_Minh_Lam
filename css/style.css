@@ -1,0 +1,16 @@
+
+img{
+	width: 150px;
+	height: 150px;
+}
+td{
+	
+	text-align: center;
+}
+table:hover{
+	border: 1px solid green;
+}
+.dienthoai:hover{
+	color: blue;
+	border: 2px dashed red;
+}
