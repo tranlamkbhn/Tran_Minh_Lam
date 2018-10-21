@@ -1,0 +1,131 @@
+*{
+
+  padding: 0;
+}
+/* Style cho body*/
+body{
+ 
+  background-image:url(../images/tuyet.jpg); 
+  font-family: arial;
+
+  
+}
+
+
+td {
+    width: 150px;
+    height: 30px;
+    
+  }
+a:hover{
+  color: red;
+}
+
+
+/*==Style cho menu===*/
+#menu{
+
+  width: 1000px;
+}
+#menu ul {
+  background: #1F568B;
+  list-style-type: none;
+  text-align: center;
+  font-family: Tahoma;
+}
+#menu li {
+  color: #f1f1f1;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: -5px;
+}
+#menu a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+#menu a:hover {
+  background: #F1F1F1;
+  color: #333;
+}
+
+/*==Dropdown Menu Diễn đàn==*/
+.sub-menu {
+  display: none;
+  position: absolute;
+}
+#menu li {
+  position: relative;
+}
+#menu li:hover .sub-menu {
+  display: block;
+}
+.sub-menu li {
+  margin-left: 0 !important;
+}
+
+/*==Menu cấp 3==*/
+.sub-menu > ul {
+  display: none !mportant;
+}
+
+
+
+
+
+/* style các bảng*/
+.content1{
+  text-align: justify;
+  background-color:#FFE2C6;
+}
+.content{
+  padding:0 5px 0 5px;
+  margin:auto;
+  vertical-align: top;
+  width: 700px;
+  border: 0px;
+  text-align: justify;
+ 
+}
+.left_content{
+  width: 700px;
+  border: 0px;
+  text-align: justify;
+}
+.right_content{
+  width: 700px;
+  border: 0px;
+  text-align: right;
+}
+/*anh ở giữa*/
+.anh{
+  width: 150px;
+  height: 110px;
+}
+
+td{
+ width: 700px;
+
+}
+
+
+.title_menu{
+  background-image: url(../images/anh.jpg);
+}
+
+p:hover{
+  color: blue;
+}
+td:hover{
+  color: red;
+}
+
+.danhmuc{
+  text-align: justify;
+}
+.menubar{
+  background-size: 700px;
+  background-repeat: no-repeat;
+}
