@@ -1,0 +1,33 @@
+*{
+
+  padding: 0;
+}
+/* Style cho body*/
+body{
+ 
+  background-image:url(../images/bg3.png); 
+  background-color: #caf7f5;
+  text-transform: capitalize;
+  text-shadow: #1F568B 3px 3px 5px ;
+}
+
+
+td {
+    width: 150px;
+    font-style: italic;
+  }
+
+
+  b {
+  color: red;
+
+  }
+a:hover{
+  color: red;
+}
+td h3{
+  background: #cecece;
+  padding: 8px 0;
+  font-weight: bold;
+  border-left: 8px solid #ff5600
+}
