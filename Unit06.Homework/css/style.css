@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+
+	width: 1000px;
+	margin:  0 auto;
+	font-size: 18px;
+}
+#menu{
+	padding-top: 10px;
+	overflow: hidden;
+	height: 110px;
+}
+#menu ul{
+	list-style-type: none;
+	width: 50%;
+	margin: 0 auto;	
+	border-top:  1px solid;
+	border-bottom: 1px solid;
+}
+#menu ul li{
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+}
+img{
+	height: 100px;
+	width: 100px;
+
+}
+#menu ul li a {
+	text-decoration: none;
+	color: #333;
+}
+#img-logo{
+	margin-bottom: -75px;
+
+}
+
+
+.item-child{
+	margin: 6px;
+	width: 30%;	
+	float: left;
+	padding: 10px;
+}
+.item-child img{
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+.option{
+	background-color: #E6E8C9;
+	overflow: hidden;
+	width: 100%
+}
+.option-top{
+	padding: 20px;
+	text-align: center;
+}
+.
+.item-left{
+	float: left;
+}
+ h1,h2,h3{
+	color: #3F923F;
+}
+.item-content{
+	overflow: hidden;
+	position: relative;
+}
+.item-icon{
+	right: 0;
+	position: absolute;
+	top: 0;
+}
+.item-icon ul{
+	list-style-type: none;
+}
+.item-icon ul li{
+	display: inline-block;
+	padding: 5px;
+}
+#about{
+	overflow: hidden;
+	padding: 20px;
+	line-height: 2;
+	overflow: hidden;
+
+}
+.about-me{
+	width: 65%;
+	float: left;
+}
+.stalker{
+	width: 35%;
+	float: right ;
+}
+.stalker ul{
+	list-style-type: none;
+}
+
+
+.stalker ul li{
+	display: inline-block;
+	padding: 10px;
+	font-size: 40px;
+	color: #3F923F;
+}
+.stalker ul li a,.about-me a{
+
+color: #3F923F;
+}
+#footer{
+	color: #fff;
+	overflow: hidden;
+	background: #75D1D1;
+	border: 1px solid;
+	padding: 30px 50px;
+}
+#footer h2{
+	color: #fff;
+}
+input{
+	width: 100%;
+	margin: 10px 0;
+	height: 30px;
+}
+label{
+	width: 100%;
+	float: left;
+}
+textarea{
+	width: 100%;
+}
+button{
+	width: 50px;
+	padding: 5px;
+	background: #3F923F;
+	border: 0px;
+	color: #fff;
+}
+@media(max-width: 700px) {
+	body{
+		width: 100%;
+	}
+	header{
+		width: 100%;
+	}
+	.main{
+		width: 100%;
+	}
+	.item-child{
+		width: 46%;
+		margin: 0;
+	}
+	.about-me,.stalker{
+		width: 100%;
+
+	}
+	#footer{
+		padding: 10px;
+
+	}
+
+}
+
+@media(max-width: 480px){
+	.item-child{
+		width: 100%;
+		margin: 15px 0;
+	}
+	.about-me,.stalker{
+		width: 100%;
+
+	}
+}
