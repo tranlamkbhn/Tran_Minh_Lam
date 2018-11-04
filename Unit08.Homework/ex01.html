@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bai Tap</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" charset="utf-8" async defer>
+		confirm('Bạn đã đủ 18+')
+	</script>
+
+</head>
+<body>
+
+
+	<!-- Tổng của 10 số chẵn đầu tiên -->
+	<button onclick="click01()">click01</button>
+	<script type="text/javascript" charset="utf-8" async defer>
+		function click01(){
+			{
+				function tinh_tong(n){
+					var tong = 0;
+					var index = 0;
+
+					while (index <= n)
+					{
+						if (index % 2 == 0){
+							tong += index;
+						}
+
+						index++;
+					}
+					return tong;
+				}
+			}
+			var n = parseInt(prompt("Nhập số cần kiểm tra"));
+			document.write("Tổng số chẵn từ 1 tới " + n + " là: " + tinh_tong(n));
+		}
+	</script>
+
+
+	<!-- Viết chương trình tính tổng: S = 1 + 1/2 + 1/3 + … + 1/n với n nguyên dương được nhập từ bàn phím. -->
+	<button onclick="click02()">click02</button>
+	<script type="text/javascript" charset="utf-8" async defer>
+		function click02(){
+
+			var n;
+			var sum = 0
+			do{
+				document.writeln('');
+				n = parseInt(prompt('Nhập n ='));
+				if(n<0){
+					document.write('Bạn phải nhập số nguyên dương!')
+				}
+			}while (n<=0);
+			for(i=1;i<=n;i++){
+				sum+= 1/i;
+			}
+			document.write('Tổng S =' + sum);
+		}	
+	</script>
+
+
+	<!-- Viết chương trình nhập vào 3 số M, N, K từ bàn phím. Tính tổng các số chia 	hết cho k trong khoảng từ N đến M. 
+	Lưu ý: Trong khoảng N đến M. (N<=M) -->
+	<button onclick="click03()">click03</button>
+	<script type="text/javascript" charset="utf-8" async defer>						function click03(){
+		var m,n,k;
+		var sum=0;
+		do{
+			document.write('');
+			m=parseInt(prompt('Nhập số nguyên m ='));
+			document.write('');
+			n=parseInt(prompt('Nhập số nguyên n ='));
+			if(m<n){
+				document.write('Bạn phải nhập m >= n');
+			}
+		}while (m<n);
+		document.write('');
+		k=parseInt(prompt('Nhập số nguyên k ='));
+		for(i=m-1;i>=n+1;i--){
+			if(i%k==0){
+				sum = sum+i;
+			}
+
+		}
+		document.write('Tổng các số chia hết cho '+k+' trong khoảng ('+m+','+n+') =  '+sum);
+			}
+		</script>
+
+
+	<!-- Viết chương trình tính tổng S = 1 /1! + 2 /2! + ….+ n / n! với n nguyên dương được 	nhập từ bàn phím. -->
+	<button onclick="click04()">click04</button>
+	<script type="text/javascript" charset="utf-8" async defer>
+	function click04(){
+		var n;
+		var giaiThua =1;
+		var sum=0;
+		do{
+			document.write('');
+			n=parseInt(prompt('Nhập số nguyên dương n: '))
+			if(n<=0){
+				document.write('Phải nhập số nguyên dương!')
+			}
+		}while (n<=0) ;
+		for(i=1;i<=n;i++){
+			giaiThua *= i;
+			sum += (i / giaiThua)
+		}
+		document.write('Tổng =' + sum);
+	}
+	</script>
+
+
+	<!-- Viết chương trình nhập vào số nguyên n. Tính và in ra các tổng sau:
+			S = 1 + 2 + 3+ ... + n
+			Sử dụng vòng lặp do...while để tính -->
+	<button onclick="click05()">click05</button>
+	<script type="text/javascript" charset="utf-8" async defer>
+				function click05(){
+					var n;
+					var sum=0;
+					do{
+						var n = parseInt(prompt("Nhập n: "))
+						if(n<=0){
+							document.write('Bạn phải nhập số nguyên dươnng')
+						}
+					}while (n<=0);
+					for(i=1;i<=n;i++){
+						sum+=i;
+					}
+					document.write('Tổng S ='+ sum);
+				}
+	</script>
+
+
+	<!-- Viết chương trình đếm và in ra số lượng các số nguyên chia hết cho 3 hoặc 7 nằm trong đoạn 1 đến 100 -->
+	<button onclick="click06()">click06</button>
+	<script type="text/javascript" charset="utf-8" async defer>
+				function click06(){
+					var n=parseInt(prompt("nhap so n="));
+					for (var i = 0; i <= 100; i++){
+						if (i % 3 == 0 || i % 7 == 0){
+							document.write(i + ' - ');
+						}
+					}
+				}
+	</script>
+</body>
+</html>

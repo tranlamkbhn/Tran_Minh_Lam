@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<script language="javascript">
+	var interval_obj = setInterval(function(){
+              alert("Bạn đã đủ 18+");
+              clearInterval(interval_obj)});
+</script>
+
+<button onclick="hinh1()">Tam giác vuông</button>
+<script type="text/javascript">
+	function hinh1(){
+		var n=parseInt(prompt("nhap so n="));
+
+		for (var i = 1; i <=n; i++) {
+			for (var j =1; j<=n; j++) {
+				if (i>=j) {
+					document.write("*");
+				}	
+			}
+			document.write("<br>");
+
+		}
+	}
+</script>
+
+
+<button onclick="hinh2()">Hình chữ nhật</button>
+<script type="text/javascript">
+	function hinh2(){
+		var n=parseInt(prompt("nhap so n="));
+		document.write("<hr>");
+		for (var i = 1; i <=n; i++) {
+			for (var j =1; j<=n; j++) {
+				document.write("*");
+			}
+
+			document.write("<br>");
+		}
+	}
+
+</script>
+
+<button onclick="hinh3()">Tam giác vuông ngược</button>
+<script type="text/javascript">
+	function hinh3(){
+		var n=parseInt(prompt("nhap so n="));
+		do{
+			document.write('<hr>');
+			if(n<=0);
+		}while (n<=0) {
+			for (var i=n; i >= 1; i--) {
+				for (var k=i; k >= 1; k--) {
+					document.write('*');
+				}
+				document.write('<br>');
+			}
+		}
+	}
+</script>
+
+<button onclick="hinh4()">Hình chữ nhật rỗng</button>
+<script type="text/javascript">
+	function hinh4(){
+		cd=parseInt(prompt("Mời bạn nhập cd","Nhập vào đây.."));
+		cr=parseInt(prompt("Mời bạn nhập cr","Nhập vào đây..."));
+		document.write('<table>');
+		for(k=1;k<=cr;k++){
+			document.write('<tr>')
+			for (i=1; i <=cd ; i++)
+
+			{
+				if(i==1||i==cd||k==1||k==cr){
+					document.write('<td>');
+					document.write('#');
+					document.write('</td>');
+				}
+				else {
+					document.write('<td>');
+					document.write(' ');
+					document.write('</td>');	
+				}
+			}
+			document.write('</tr>');
+		}
+		document.write('</table>');
+	}
+
+</script>
+
+</body>
+</html>
