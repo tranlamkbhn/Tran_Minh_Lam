@@ -19,15 +19,14 @@
 			{
 				function tinh_tong(n){
 					var tong = 0;
-					var index = 0;
-
-					while (index <= n)
+					var dem = 0;
+					while (dem <= n)
 					{
-						if (index % 2 == 0){
-							tong += index;
+						if (dem % 2 == 0){
+							tong += dem;
 						}
 
-						index++;
+						dem++;
 					}
 					return tong;
 				}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit02</title>
+	<meta charset="utf-8">
+	<script src="jquery-3.3.1.min.js"></script>
+
+	<style type="text/css" media="screen">
+	* {
+		margin: 0; 
+		padding: 0;
+	}
+	body{
+		background: #86B2A4;
+		font-size: 18px;
+	}
+
+	#main {
+		width: 500px;
+		margin: 10rem auto;
+	}
+
+	ul {
+		list-style: none;
+		margin-bottom: 50px;
+	}
+
+	ul li {
+		border: 1px solid #a5a5a5;
+		overflow: hidden;
+		height: 40px;
+		line-height: 40px;
+		background: #adbddf73;
+	}
+
+	ul li:hover {
+		background: #ccf62eb3;
+		transition: 1s;
+	}
+
+	ul li div {
+		float: left;
+		padding: 0px 15px;
+		border-right: 1px solid #a5a5a5;
+	}
+
+	ul li p {
+		float: left;
+		margin-left: 20px;
+	}
+	input{
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+
+	<div id="main">
+
+		<ul>
+			<li>
+				<div>
+					<input type="checkbox" class="check_all" id="checkAll" />
+				</div>
+				<p>
+					Check All - uncheck All
+				</p>
+			</li>
+
+			<li>
+				<div>
+					<input type="checkbox" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</li>
+
+			<li>
+				<div>
+					<input type="checkbox" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</li>
+
+			<li>
+				<div>
+					<input type="checkbox" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</li>
+
+			<li>
+				<div>
+					<input type="checkbox" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</li>
+
+			<li>
+				<div>
+					<input type="checkbox" />
+				</div>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit
+				</p>
+			</li>
+		</ul>
+
+	</div>
+
+
+
+	<script>
+		$(document).ready(function() {
+			$("#checkAll").change(function () {
+				$("input:checkbox").prop('checked', $(this).prop("checked"));
+			});
+		});
+	</script>
+
+
+</body>
+</html>

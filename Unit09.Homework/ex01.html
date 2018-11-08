@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit01</title>
+	<meta charset="utf-8">
+	<script language="javascript" src="jquery-3.3.1.min.js"></script>
+	<style type="text/css" media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		
+	.text{
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		overflow: hidden;
+		padding-top: 10rem;
+	}
+
+	button{
+		margin:30px;
+		width: 10%;
+		height: 50px;
+		border-radius: 10px;
+		border: 1px solid #fff;
+		cursor: pointer;
+		outline: none;
+		font-size: 20px;
+		transition: 1.5s;
+	}
+	button:hover{
+		background: #FFA500;
+	}
+	h1{
+		font-size: 40px;
+		font-weight: 300;
+
+		margin-left:30px;
+	}
+</style>
+</head>
+<body>
+
+	<div id="main">
+		<div class="text">
+			<h1>Hello I'm Lãm</h1>
+
+			<br>
+
+			<button type="button"  id="default" onclick="change_color_deft()">Mặc định</button>
+
+			<button type="button" id="inc" onclick="change_color_inc()">Tăng size
+			</button>
+
+			<button type="button" id="des" onclick="change_color_des()">Giảm size</button>
+		</div>
+	</div>
+
+
+
+	<script>
+		var section ="h1";
+		var originalSize = $(section).css('fontSize');
+		
+		$('#inc').click(function  () {
+			var incSize = parseInt($(section).css('fontSize'));
+			$(section).css('fontSize', incSize*2);
+		});
+
+		$('#des').click(function  () {
+			var incSize = parseInt($(section).css('fontSize'));
+			$(section).css('fontSize', incSize*0.5);
+		});
+
+
+		$('#default').click(function() {
+
+			$(section).css('fontSize',originalSize);
+			return false;
+		});
+	</script>	
+
+	<script language="javascript">
+		function change_color_deft()
+		{
+			document.getElementById("main").style.color = '#000000';
+		}
+
+		function change_color_inc()
+		{
+			document.getElementById("main").style.color = '#FFA500';
+		}
+		function change_color_des()
+		{
+			document.getElementById("main").style.color = 'green';
+		}
+	</script>				
+</body>
+</html>
