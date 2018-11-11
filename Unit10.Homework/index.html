@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<title>Form Login</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.main{
+			margin: 0 auto;
+			padding: 80px 0;
+			background: linear-gradient(-135deg, #c850c0, #4158d0);
+		}
+		form{
+			width: 60%;
+			overflow: hidden;
+			margin: 10px auto;
+			background: rgb(255, 255, 255);
+		    border-radius: 10px;			
+		    padding: 10px;
+		}
+		ul { margin: 10px 0; padding:0;}
+		ul li{
+			width: 100%;
+			list-style-type: none;
+			display: inline-block;
+		}
+		ul li input{
+			height: 30px;
+			border:  1px solid #cece;
+			width: 97%;
+			margin: 10px 0;
+			padding: 0 10px;
+		}
+
+		.error{
+			color: red;
+		}
+		.sex{width: 50% !important;float: left;margin-bottom: 10px}
+		button{
+			padding: 10px;
+		    font-size: 16px;
+		    border: none;
+		    background: linear-gradient(-135deg, #c850c0, #4158d0);
+		    border-radius: 5px;
+		    color: #fff;
+		    font-weight:700;
+		}
+
+	</style>
+</head>
+<body onload="document.registration.userid.focus();">
+	<div class="main">
+		<form name='registration' onSubmit="return formValidation();" id="myForm">
+			<ul>
+				<li><label for="userid">User id:</label></li>
+				<li><input type="text" name="userid" size="12" /></li>
+				<div id="user_error"  class="error"></div>
+
+				<li><label for="passid">Password:</label></li>
+				<li><input type="password" name="passid" size="12" /></li>
+				<div id="password_error" class="error"></div>
+
+				<li><label for="passcf">Confimr Password:</label></li>
+				<li><input type="password" name="passcf" size="12" /></li>
+				<div id="cfpassword_error"  class="error"></div>
+
+				<li><label for="username">Name:</label></li>
+				<li><input type="text" name="username" size="50" /></li>
+				<div id="name_error"  class="error"></div>
+
+				<li><label for="email">Email:</label></li>
+				<li><input type="text" name="email" size="50" /></li>
+				<div id="email_error"  class="error"></div>
+
+				<li><label for="phone">Phone:</label></li>
+				<li><input type="text" name="mphone" size="12" /></li>
+				<div id="phone_error"  class="error"></div>
+
+				<li><label id="gender">Sex:</label></li>
+				<li class="sex"><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+
+				<li class="sex"><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+				<div id="sex_error"  class="error"></div>
+
+
+				<button type="submit" name="submit" value="Submit" />Submit</button>
+				<button type="button" onclick="myFunction()" value="Reset form">Reset form</button>
+			</ul>
+		</form>
+
+	</div>
+
+	<script>
+
+		function formValidation(){
+			var uid = document.registration.userid;
+			var passid = document.registration.passid;
+			var passcf = document.registration.passcf;
+			var uname = document.registration.username;
+			var uemail = document.registration.email;
+			var phone = document.registration.mphone;
+			var umsex = document.registration.msex;
+			var ufsex = document.registration.fsex; 
+			
+			var user_error = document.getElementById('user_error')
+			var password_error = document.getElementById('password_error');
+			var cfpassword_error = document.getElementById('cfpassword_error');
+			var name_error = document.getElementById('name_error');
+			var email_error = document.getElementById('email_error');
+			var phone_error = document.getElementById('phone_error');
+			var sex_error = document.getElementById('sex_error');
+
+			if(userid_validation(uid,5,12)){
+				if(passid_validation(passid,6,12)){
+					if (confirm_pass(passcf,6,12)) {
+						if(allLetter(uname)){
+							if(ValidateEmail(uemail)){
+								if(ValidatePhone(phone)){ 
+									if(validsex(umsex,ufsex)){
+								
+									}
+								} 
+							}
+						}
+					}
+				}
+				return false;
+			} 
+
+			function userid_validation(uid,mx,my){
+				var uid_len = uid.value.length;
+				if (uid_len == 0 || uid_len >= my || uid_len < mx){
+					user_error.innerHTML=("User Id should not be empty / length be between "+mx+" to "+my);
+					uid.focus();
+					return false;
+				}else {	
+					user_error.innerHTML = "";
+
+				return true;
+			}
+		}
+
+			function passid_validation(passid,mx,my){
+				var passid_len = passid.value.length;
+				if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+				{
+					password_error.innerHTML = "Password should not be empty / length 6 - 12";
+				
+					passid.focus();
+					return false;
+				}else{
+			       password_error.innerHTML = "";
+			        return true;
+			      }
+			}
+			function confirm_pass() {
+				if (passid.value != passcf.value){
+					cfpassword_error.innerHTML = "The two passwords do not match";
+					return false;
+				}else{
+			       cfpassword_error.innerHTML = "";
+			        return true;
+			      }
+					
+			}
+			function allLetter(uname){ 
+				var letters = /^[A-Za-z]+$/;
+				if(uname.value.match(letters)){
+					name_error.innerHTML = "";
+					return true;
+				}else{
+					name_error.innerHTML='Username must have alphabet characters only';
+					uname.focus();
+					return false;
+				}
+			}
+
+
+			function ValidateEmail(uemail){
+				var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				if(uemail.value.match(mailformat)){
+					email_error.innerHTML = '';
+					return true;
+				}else{
+					email_error.innerHTML = "You have entered an invalid email address!";
+					return false;
+				}
+			} 
+
+			function ValidatePhone(phone){
+				var phoneformat = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+				if(phone.value.match(phoneformat)){
+					phone_error.innerHTML = '';
+					return true;
+				}else{
+					phone_error.innerHTML = "You have entered an invalid phone! 0 - 9";
+					return false;
+				}
+			}
+
+			function validsex(umsex,ufsex){
+				x=0;
+				if(umsex.checked) {
+					x++;
+				}
+				if(ufsex.checked){
+					x++; 
+				}
+
+				if (x==2){
+					sex_error.innerHTML = 'Both Male/Female are checked';
+					ufsex.checked=false
+					umsex.checked=false
+					umsex.focus();
+					return false;
+				}
+
+				if(x==0){
+					sex_error.innerHTML = 'Select Male/Female';
+					umsex.focus();
+					return false;
+				}else{
+					alert('Form Succesfully Submitted');
+					window.location.reload()
+					return true;
+				}
+			}
+		}
+		function myFunction() {
+		    document.getElementById("myForm").reset();
+		}
+	</script>
+</body>
+</html>
