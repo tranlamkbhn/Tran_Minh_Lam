@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Arial, Time New Roman, sans-serif;
+}
+#header{
+	width: 100%;
+	background: #2184be;
+	font-size: 16px;
+	overflow: hidden;
+	font-family: sans-serif;
+}
+.head_left{
+	width: 30%;
+	float: left;
+	color: #fff;
+	padding-left: 5em;
+    padding-top: 1em;
+}
+.head_right{
+	width: 60%;
+	float: right;
+}
+.item{
+	display: inline-block;
+	color: white;
+	padding: 20px;
+}
+.item:hover, h2:hover{
+	color: #ff7f00;
+	cursor: pointer;
+}#content{
+	width: 100%;
+	margin-top: 30px;
+	overflow: hidden;
+}#left{
+	cursor: pointer;
+	float: left;
+	width: 20%;
+	background-color: #E6E6E6;
+	color: #2184be;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}.sidebar{
+	padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}.sidebar:hover{
+	background: #2184be ;
+	color: #fff;
+	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#about{
+	float: left;
+	width: 75%;
+
+}#input{
+	margin-left: 20px;
+}
+.bt{
+	margin-right: 80px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #888;
+    outline: none;
+    background: #2184be;
+    color: #fff;
+}
+.form{
+	background: #eee;
+	margin-top: 2em;
+    margin-left: 2em;
+	display: none;
+}
+.hr{
+	display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 40px;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.form>form{
+	margin-top: 25px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	border-radius:5px ;
+}
+.form>form>div{
+ 	padding-top: 20px;
+    padding-bottom: 10px;
+}
+.form>form>div>input{
+	width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    outline: none;
+}
+.lb{
+	padding-left: 800px;
+	padding-top: 20px;
+}
+.lb>button{
+	background: #2184be;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.error{
+	color: red;
+}
+.ib1 {
+	display: block;
+}
+.prevTab1{
+	background: #eee;
+    color: #aaa;
+}
